@@ -21,6 +21,3 @@ nav a {
 	text-transform: uppercase;
 	line-height: 50px;
 }
-nav a:first-child {
-	margin: 0;
-}
