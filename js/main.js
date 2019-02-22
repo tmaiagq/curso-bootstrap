@@ -10,3 +10,18 @@ $('#vendas_collapse').on('show.bs.collapse', function () {
 $('#vendas_collapse').on('hidden.bs.collapse', function () {
 	$('a[href="#vendas_collapse"]').text("Ver mais")
 })
+$(window).on("scroll", function() {
+	var distanciaDoTopo = $(window).scrollTop();
+	if (distanciaDoTopo > 400) {
+		distanciaDoTopo = 400
+	}
+	$("#header_shadow").css("top", (distanciaDoTopo / 15) + "px")
+	// console.log(distanciaDoTopo);
+	// if (distanciaDoTopo > 150) {
+	// 	$("#header").addClass("shadow");		
+	// } else {
+	// 	$("#header").removeClass("shadow");
+	// }
+	// console.log($(window).scrollTop());
+	// console.log("scrolou");
+})
