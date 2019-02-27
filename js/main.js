@@ -25,3 +25,26 @@ $(window).on("scroll", function() {
 	// console.log($(window).scrollTop());
 	// console.log("scrolou");
 })
+var opcoesSR = {
+	delay: 100,
+	duration: 900,
+	distance: '50px',
+	origin: 'bottom',
+	viewOffset: {
+		bottom: 300
+	}
+}
+ScrollReveal().reveal('#clientes-box', opcoesSR)
+ScrollReveal().reveal('.feature', opcoesSR)
+$(function () {
+	$('[data-toggle="tooltip"]').tooltip()
+})
+$("#salvar_cadastro").on("click", function() {
+	var valorNome = $("#input_nome").val()
+	// console.log(valorNome.length)
+	if (valorNome.length > 0) {
+		$(".alert.alert-success").show()
+	} else {
+		$(".alert.alert-warning").show()
+	}
+})

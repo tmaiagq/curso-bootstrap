@@ -35,7 +35,7 @@
 			</div>
 			<div class="col-12 col-md-6 col-lg-4 offset-lg-2 order-md-1">
 				<h2 class="mt-5 font-weight-bold">Lorem ipsum dolor sit amet.</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua.</p>
 				<button class="btn btn-green" data-toggle="modal" data-target="#cadastro_modal">Inicie gratuitamente</button>
 			</div>
@@ -65,16 +65,8 @@
 			<div class="row text-center">
 				<div class="col col-md-8 col-lg-6 mx-auto" id="vendas">
 					<h3>Aumente suas vendas 3x</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p id="vendas_collapse" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p id="vendas_collapse" class="collapse text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					<a href="#vendas_collapse" data-toggle="collapse">Ver mais</a>
 					<img class="img-fluid d-block mx-auto" src="img/dashboard.png" alt="Dashboard">
 					<a href="#" class="btn btn-green">Inicie agora de graça!</a>
@@ -127,8 +119,7 @@
 			<div class="row align-items-center">
 				<div class="col col-12 col-lg-4">
 					<h1>Bootstrap</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 				<div class="col col-6 col-lg-3 offset-lg-1">
 					<a href="#" class="d-block">Início</a>
@@ -139,15 +130,15 @@
 				<div class="col col-6 col-lg-4">
 					<h2>Siga-nos</h2>
 					<ul>
-						<li class="d-inline-block">T</li>
-						<li class="d-inline-block">F</li>
-						<li class="d-inline-block">I</li>
+						<li class="d-inline-block" data-toggle="tooltip" data-placement="top" title="Twitter">T</li>
+						<li class="d-inline-block" data-toggle="tooltip" data-placement="top" title="Facebook">F</li>
+						<li class="d-inline-block" data-toggle="tooltip" data-placement="top" title="Instagram">I</li>
 					</ul>
 				</div>
 			</div>
 			<div class="sub-footer">
-				<p class="float-left">Criado por turma i240n</p>
-				<p class="float-right">Copyright 2019 InfNet</p>
+				<p class="float-left text-justify">Criado por turma i240n</p>
+				<p class="float-right text-justify">Copyright 2019 InfNet</p>
 			</div>
 		</div>
 	</div>
@@ -192,8 +183,20 @@
   						</div>
   					</form>
 	        	</div>
+	        	<div class="alert alert-warning" role="alert">
+	        		Há um problema com o formulário.
+	        		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	        			<span aria-hidden="true">&times;</span>
+	        		</button>
+	        	</div>
+	        	<div class="alert alert-success" role="alert">
+	        		Cadastro realizado com sucesso.
+	        		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	        			<span aria-hidden="true">&times;</span>
+	        		</button>
+	        	</div>
 	        	<div class="modal-footer">
-	          	<button type="button" class="btn btn-primary">Salvar</button>
+	          	<button type="button" class="btn btn-primary" id="salvar_cadastro">Salvar</button>
 	          	<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 	        	</div>
 	      	</div>
@@ -202,6 +205,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/scrollreveal.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
